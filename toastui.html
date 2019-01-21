@@ -1,27 +1,37 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <HEAD>
-    <link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css">
-    <script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
-    </HEAD>
-    <script>
-    var ImageEditor = require('tui-image-editor');
-    var instance = new ImageEditor(document.querySelector('#tui-image-editor'), {
-        cssMaxWidth: 700,
-        cssMaxHeight: 500,
-        selectionStyle: {
-            cornerSize: 20,
-            rotatingPointOffset: 70
-        }
-    });
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>1. Basic</title>
+    <script src="../lib/jquery/dist/jquery.js"></script>
+    <script src='../lib/markdown-it/dist/markdown-it.js'></script>
+    <script src="../lib/to-mark/dist/to-mark.js"></script>
+    <script src="../lib/tui-code-snippet/dist/tui-code-snippet.js"></script>
+    <script src="../lib/codemirror/lib/codemirror.js"></script>
+    <script src="../lib/highlightjs/highlight.pack.js"></script>
+    <script src="../lib/squire-rte/build/squire-raw.js"></script>
+    <link rel="stylesheet" href="../lib/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../lib/highlightjs/styles/github.css">
+    <link rel="stylesheet" href="./explain.css">
+  </head>
+  <body>
+    <div class="explain">
+      See available options in <a target="_blank" href="../ToastUIEditor.html#ToastUIEditor">here</a>
+    </div>
+    <div class="code-html">
+      <script src="../dist/tui-editor-Editor.js"></script>
+      <link rel="stylesheet" href="../dist/tui-editor.css">
+      <link rel="stylesheet" href="../dist/tui-editor-contents.css">
+
+      <div id="editSection"></div>
+    </div>
+    <script class="code-js">
+      var editor = new tui.Editor({
+        el: document.querySelector('#editSection'),
+        initialEditType: 'markdown',
+        previewStyle: 'vertical',
+        height: '300px'
+      });
     </script>
-
-    <body>
-    ...
-    <div id="tui-image-editor"></div>
-    ...
-    </body>
-
-
-   
+  </body>
 </html>
